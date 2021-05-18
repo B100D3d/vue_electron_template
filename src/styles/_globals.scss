@@ -1,0 +1,49 @@
+@import "./variables";
+
+* {
+    box-sizing: border-box;
+}
+
+*.no-scrollbar,
+*.no-scrollbar::before,
+*.no-scrollbar::after {
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        height: 0;
+        width: 0;
+    }
+}
+
+*,
+*::before,
+*::after {
+    scrollbar-width: thin;
+    scrollbar-color: rgba($global-color-rgb, 0.5) transparent;
+}
+
+* {
+    &::-webkit-scrollbar {
+        height: 5px;
+        width: 5px;
+        background-color: transparent;
+    }
+    &::-webkit-scrollbar-corner {
+        background-color: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: rgba($global-color-rgb, 0.5);
+        border-radius: 20px;
+    }
+
+    &.no-scrollbar {
+        &::-webkit-scrollbar {
+            height: 0;
+            width: 0;
+        }
+    }
+}
+
+svg {
+    pointer-events: none;
+}

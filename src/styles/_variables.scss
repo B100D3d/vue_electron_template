@@ -1,0 +1,270 @@
+$screen-s: 640px;
+$screen-m: 960px;
+$screen-l: 1260px;
+$screen-xl: 1600px;
+
+$left-messages-padding: 50px;
+
+$global-border: var(--global-border);
+$global-border-rgb: var(--global-border-rgb);
+$global-color: var(--global-color);
+$global-color-rgb: var(--global-color-rgb);
+$global-emphasis-color: var(--global-emphasis-color);
+$global-emphasis-color-rgb: var(--global-emphasis-color-rgb);
+$global-muted-color: var(--global-muted-color);
+$global-muted-color-rgb: var(--global-muted-color-rgb);
+
+$global-link-color: var(--global-link-color);
+$global-link-color-rgb: var(--global-link-color-rgb);
+$global-link-hover-color: var(--global-link-hover-color);
+$global-link-hover-color-rgb: var(--global-link-hover-color-rgb);
+
+$global-inverse-color: var(--global-inverse-color);
+$global-inverse-color-rgb: var(--global-inverse-color-rgb);
+
+//
+// Backgrounds
+//
+
+$global-background: var(--global-background);
+$global-background-rgb: var(--global-background-rgb);
+
+$grey-lighten-4-background: var(--grey-lighten-4-background);
+$grey-lighten-4-background-rgb: var(--grey-lighten-4-background-rgb);
+$grey-lighten-2-background: var(--grey-lighten-2-background);
+$grey-lighten-2-background-rgb: var(--grey-lighten-2-background-rgb);
+
+$nav-link-active-background: var(--nav-link-active-background);
+$nav-link-active-background-rgb: var(--nav-link-active-background-rgb);
+
+$global-muted-background: var(--global-muted-background);
+$global-muted-background-rgb: var(--global-muted-background-rgb);
+$global-primary-background: var(--global-primary-background);
+$global-primary-background-rgb: var(--global-primary-background-rgb);
+$global-secondary-background: var(--global-secondary-background);
+$global-secondary-background-rgb: var(--global-secondary-background-rgb);
+
+$global-success-background: var(--global-success-background);
+$global-success-background-rgb: var(--global-success-background-rgb);
+$global-warning-background: var(--global-warning-background);
+$global-warning-background-rgb: var(--global-warning-background-rgb);
+$global-danger-background: var(--global-danger-background);
+$global-danger-background-rgb: var(--global-danger-background-rgb);
+
+$alert-primary-background: var(--alert-primary-background);
+$alert-primary-background-rgb: var(--alert-primary-background-rgb);
+$alert-success-background: var(--alert-success-background);
+$alert-success-background-rgb: var(--alert-success-background-rgb);
+$alert-warning-background: var(--alert-warning-background);
+$alert-warning-background-rgb: var(--alert-warning-background-rgb);
+$alert-danger-background: var(--alert-danger-background);
+$alert-danger-background-rgb: var(--alert-danger-background-rgb);
+
+$table-row-active-background: var(--table-row-active-background);
+$table-row-active-background-rgb: var(--table-row-active-background-rgb);
+
+$modal-close-outside-color: var(--modal-close-outside-color);
+$modal-close-outside-color-rgb: var(--modal-close-outside-color-rgb);
+
+$button-default-hover-background: var(--button-default-hover-background);
+$button-default-hover-background-rgb: var(
+    --button-default-hover-background-rgb
+);
+$button-default-active-background: var(--button-default-active-background);
+$button-default-active-background-rgb: var(
+    --button-default-active-background-rgb
+);
+$button-primary-hover-background: var(--button-primary-hover-background);
+$button-primary-hover-background-rgb: var(
+    --button-primary-hover-background-rgb
+);
+$button-primary-active-background: var(--button-primary-active-background);
+$button-primary-active-background-rgb: var(
+    --button-primary-active-background-rgb
+);
+$button-secondary-hover-background: var(--button-secondary-hover-background);
+$button-secondary-hover-background-rgb: var(
+    --button-secondary-hover-background-rgb
+);
+$button-secondary-active-background: var(--button-secondary-active-background);
+$button-secondary-active-background-rgb: var(
+    --button-secondary-active-background-rgb
+);
+$button-danger-hover-background: var(--button-danger-hover-background);
+$button-danger-hover-background-rgb: var(--button-danger-hover-background-rgb);
+$button-danger-active-background: var(--button-danger-active-background);
+$button-danger-active-background-rgb: var(
+    --button-danger-active-background-rgb
+);
+
+$inverse-button-default-hover-background: var(
+    --inverse-button-default-hover-background
+);
+$inverse-button-default-hover-background-rgb: var(
+    --inverse-button-default-hover-background-rgb
+);
+$inverse-button-default-active-background: var(
+    --inverse-button-default-active-background
+);
+$inverse-button-default-active-background-rgb: var(
+    --inverse-button-default-active-background-rgb
+);
+$inverse-button-primary-hover-background: var(
+    --inverse-button-primary-hover-background
+);
+$inverse-button-primary-hover-background-rgb: var(
+    --inverse-button-primary-hover-background-rgb
+);
+$inverse-button-primary-active-background: var(
+    --inverse-button-primary-active-background
+);
+$inverse-button-primary-active-background-rgb: var(
+    --inverse-button-primary-active-background-rgb
+);
+$inverse-button-secondary-hover-background: var(
+    --inverse-button-secondary-hover-background
+);
+$inverse-button-secondary-hover-background-rgb: var(
+    --inverse-button-secondary-hover-background-rgb
+);
+$inverse-button-secondary-active-background: var(
+    --inverse-button-secondary-active-background
+);
+$inverse-button-secondary-active-background-rgb: var(
+    --inverse-button-secondary-active-background-rgb
+);
+$form-range-track-background: var(--form-range-track-background);
+$form-range-track-background-rgb: var(--form-range-track-background-rgb);
+$form-range-track-focus-background: var(--form-range-track-focus-background);
+$form-range-track-focus-background-rgb: var(
+    --form-range-track-focus-background-rgb
+);
+
+$card-default-hover-background: var(--card-default-hover-background);
+$card-default-hover-background-rgb: var(--card-default-hover-background-rgb);
+$card-primary-hover-background: var(--card-primary-hover-background);
+$card-primary-hover-background-rgb: var(--card-primary-hover-background-rgb);
+$card-secondary-hover-background: var(--card-secondary-hover-background);
+$card-secondary-hover-background-rgb: var(
+    --card-secondary-hover-background-rgb
+);
+
+$form-radio-checked-focus-background: var(
+    --form-radio-checked-focus-background
+);
+$form-radio-checked-focus-background-rgb: var(
+    --form-radio-checked-focus-background-rgb
+);
+$inverse-form-radio-background: var(--inverse-form-radio-background);
+$inverse-form-radio-background-rgb: var(--inverse-form-radio-background-rgb);
+$inverse-form-radio-checked-focus-background: var(
+    --inverse-form-radio-checked-focus-background
+);
+$inverse-form-radio-checked-focus-background-rgb: var(
+    --inverse-form-radio-checked-focus-background-rgb
+);
+
+$icon-link-active-color: var(--icon-link-active-color);
+$icon-link-active-color-rgb: var(--icon-link-active-color-rgb);
+$icon-button-background: var(--icon-button-background);
+$icon-button-hover-background: var(--icon-button-hover-background);
+$icon-button-hover-background-rgb: var(--icon-button-hover-background-rgb);
+$icon-button-active-background: var(--icon-button-active-background);
+$icon-button-active-background-rgb: var(--icon-button-active-background-rgb);
+
+$inverse-icon-button-hover-background: var(
+    --inverse-icon-button-hover-background
+);
+$inverse-icon-button-hover-background-rgb: var(
+    --inverse-icon-button-hover-background-rgb
+);
+$inverse-icon-button-active-background: var(
+    --inverse-icon-button-active-background
+);
+$inverse-icon-button-active-background-rgb: var(
+    --inverse-icon-button-active-background-rgb
+);
+
+$button-default-hover-border: var(--button-default-hover-border);
+$button-default-hover-border-rgb: var(--button-default-hover-border-rgb);
+$button-default-active-border: var(--button-default-active-border);
+$button-default-active-border-rgb: var(--button-default-active-border-rgb);
+
+$form-range-thumb-border: var(--form-range-thumb-border);
+$form-range-thumb-border-rgb: var(--form-range-thumb-border-rgb);
+$form-radio-border: var(--form-radio-border);
+$form-radio-border-rgb: var(--form-radio-border-rgb);
+$form-radio-background: var(--form-radio-background);
+$form-radio-background-rgb: var(--form-radio-background-rgb);
+
+$inverse-global-color: var(--inverse-global-color);
+$inverse-global-color-rgb: var(--inverse-global-color-rgb);
+$inverse-global-muted-color: var(--inverse-global-muted-color);
+$inverse-global-muted-color-rgb: var(--inverse-global-muted-color-rgb);
+$inverse-global-border: var(--inverse-global-border);
+$inverse-global-border-rgb: var(--inverse-global-border-rgb);
+
+$slidenav-color: var(--slidenav-color);
+$slidenav-color-rgb: var(--slidenav-color-rgb);
+$slidenav-hover-color: var(--slidenav-hover-color);
+$slidenav-hover-color-rgb: var(--slidenav-hover-color-rgb);
+$slidenav-active-color: var(--slidenav-active-color);
+$slidenav-active-color-rgb: var(--slidenav-active-color-rgb);
+
+$inverse-slidenav-color: var(--inverse-slidenav-color);
+$inverse-slidenav-color-rgb: var(--inverse-slidenav-color-rgb);
+$inverse-slidenav-hover-color: var(--inverse-slidenav-hover-color);
+$inverse-slidenav-hover-color-rgb: var(--inverse-slidenav-hover-color-rgb);
+$inverse-slidenav-active-color: var(--inverse-slidenav-active-color);
+$inverse-slidenav-active-color-rgb: var(--inverse-slidenav-active-color-rgb);
+
+$dotnav-item-hover-background: var(--dotnav-item-hover-background);
+$dotnav-item-hover-background-rgb: var(--dotnav-item-hover-background-rgb);
+$dotnav-item-onclick-background: var(--dotnav-item-onclick-background);
+$dotnav-item-onclick-background-rgb: var(--dotnav-item-onclick-background-rgb);
+$dotnav-item-active-background: var(--dotnav-item-active-background);
+$dotnav-item-active-background-rgb: var(--dotnav-item-active-background-rgb);
+$inverse-dotnav-item-hover-background: var(
+    --inverse-dotnav-item-hover-background
+);
+$inverse-dotnav-item-hover-background-rgb: var(
+    --inverse-dotnav-item-hover-background-rgb
+);
+$inverse-dotnav-item-onclick-background: var(
+    --inverse-dotnav-item-onclick-background
+);
+$inverse-dotnav-item-onclick-background-rgb: var(
+    --inverse-dotnav-item-onclick-background-rgb
+);
+$inverse-dotnav-item-active-background: var(
+    --inverse-dotnav-item-active-background
+);
+$inverse-dotnav-item-active-background-rgb: var(
+    --inverse-dotnav-item-active-background-rgb
+);
+
+$inverse-global-muted-background: var(--inverse-global-muted-background);
+$inverse-global-muted-background-rgb: var(
+    --inverse-global-muted-background-rgb
+);
+
+$overlay-default-background: var(--overlay-default-background);
+$overlay-default-background-rgb: var(--overlay-default-background-rgb);
+$overlay-primary-background: var(--overlay-primary-background);
+$overlay-primary-background-rgb: var(--overlay-primary-background-rgb);
+
+$thumbnav-item-background: var(--thumbnav-item-background);
+$thumbnav-item-background-rgb: var(--thumbnav-item-background-rgb);
+
+$dotnav-item-border: var(--dotnav-item-border);
+$dotnav-item-border-rgb: var(--dotnav-item-border-rgb);
+
+$inverse-table-row-active-background: var(
+    --inverse-table-row-active-background
+);
+$inverse-table-row-active-background-rgb: var(
+    --inverse-table-row-active-background-rgb
+);
+
+$global-medium-box-shadow: var(--global-medium-box-shadow);
+$global-large-box-shadow: var(--global-large-box-shadow);

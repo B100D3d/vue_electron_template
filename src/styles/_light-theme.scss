@@ -1,0 +1,420 @@
+@import "./functions";
+
+$l-global-color: #666;
+$l-global-emphasis-color: #333;
+$l-global-muted-color: #999;
+
+$l-grey-lighten-4-background: #f5f5f5;
+$l-grey-lighten-2-background: #e0e0e0;
+$l-nav-link-active-background: #eaeaea;
+
+$l-global-link-color: #1e87f0;
+$l-global-link-hover-color: #0f6ecd;
+
+$l-global-inverse-color: #fff;
+
+$l-global-background: #fff;
+
+$l-global-muted-background: #f8f8f8;
+$l-global-primary-background: #1e87f0;
+$l-global-secondary-background: #222;
+
+$l-global-success-background: #32d296;
+$l-global-warning-background: #faa05a;
+$l-global-danger-background: #f0506e;
+
+$l-base-ins-background: #ffd;
+
+$l-table-row-active-background: #ffd;
+
+$l-global-border: #e5e5e5;
+
+$l-global-medium-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+$l-global-large-box-shadow: 0 14px 25px rgba(0, 0, 0, 0.16);
+
+html {
+    //
+    // Colors
+    //
+    --global-color: #{$l-global-color};
+    --global-color-rgb: #{hex-to-rgb($l-global-color)};
+
+    --global-emphasis-color: #{$l-global-emphasis-color};
+    --global-emphasis-color-rgb: #{hex-to-rgb($l-global-emphasis-color)};
+    --global-muted-color: #{$l-global-muted-color};
+    --global-muted-color-rgb: #{hex-to-rgb($l-global-muted-color)};
+
+    --grey-lighten-4-background: #{$l-grey-lighten-4-background};
+    --grey-lighten-4-background-rgb: #{hex-to-rgb($l-grey-lighten-4-background)};
+
+    --grey-lighten-2-background: #{$l-grey-lighten-2-background};
+    --grey-lighten-2-background-rgb: #{hex-to-rgb($l-grey-lighten-2-background)};
+
+    --nav-link-active-background: #{$l-nav-link-active-background};
+    --nav-link-active-background-rgb: #{hex-to-rgb(
+            $l-nav-link-active-background
+        )};
+
+    --global-link-color: #{$l-global-link-color};
+    --global-link-color-rgb: #{hex-to-rgb($l-global-link-color)};
+    --global-link-hover-color: #{$l-global-link-hover-color};
+    --global-link-hover-color-rgb: #{hex-to-rgb($l-global-link-hover-color)};
+
+    --global-inverse-color: #{$l-global-inverse-color};
+    --global-inverse-color-rgb: #{hex-to-rgb($l-global-inverse-color)};
+
+    --inverse-global-color: #{rgba($l-global-inverse-color, 0.7)};
+    --inverse-global-color-rgb: #{hex-to-rgb(rgba($l-global-inverse-color, 0.7))};
+    --inverse-global-muted-color: #{rgba($l-global-inverse-color, 0.5)};
+    --inverse-global-muted-color-rgb: #{hex-to-rgb(
+            rgba($l-global-inverse-color, 0.5)
+        )};
+    --inverse-global-border: #{rgba($l-global-inverse-color, 0.2)};
+    --inverse-global-border-rgb: #{hex-to-rgb(
+            rgba($l-global-inverse-color, 0.2)
+        )};
+
+    --slidenav-color: #{rgba($l-global-color, 0.5)};
+    --slidenav-color-rgb: #{hex-to-rgb(rgba($l-global-color, 0.5))};
+    --slidenav-hover-color: #{rgba($l-global-color, 0.9)};
+    --slidenav-hover-color-rgb: #{hex-to-rgb(rgba($l-global-color, 0.9))};
+    --slidenav-active-color: #{rgba($l-global-color, 0.5)};
+    --slidenav-active-color-rgb: #{hex-to-rgb(rgba($l-global-color, 0.5))};
+
+    --inverse-slidenav-color: #{rgba(rgba($l-global-inverse-color, 0.7), 0.7)};
+    --inverse-slidenav-color-rgb: #{hex-to-rgb(
+            rgba(rgba($l-global-inverse-color, 0.7), 0.7)
+        )};
+    --inverse-slidenav-hover-color: #{rgba(
+            rgba($l-global-inverse-color, 0.7),
+            0.95
+        )};
+    --inverse-slidenav-hover-color-rgb: #{hex-to-rgb(
+            rgba(rgba($l-global-inverse-color, 0.7), 0.95)
+        )};
+    --inverse-slidenav-active-color: #{rgba(
+            rgba($l-global-inverse-color, 0.7),
+            0.7
+        )};
+    --inverse-slidenav-active-color-rgb: #{hex-to-rgb(
+            rgba(rgba($l-global-inverse-color, 0.7), 0.7)
+        )};
+
+    //
+    // Backgrounds
+    //
+
+    --global-background: #{$l-global-background};
+    --global-background-rgb: #{hex-to-rgb($l-global-background)};
+
+    --global-muted-background: #{$l-global-muted-background};
+    --global-muted-background-rgb: #{hex-to-rgb($l-global-muted-background)};
+    --global-primary-background: #{$l-global-primary-background};
+    --global-primary-background-rgb: #{hex-to-rgb($l-global-primary-background)};
+    --global-secondary-background: #{$l-global-secondary-background};
+    --global-secondary-background-rgb: #{hex-to-rgb(
+            $l-global-secondary-background
+        )};
+
+    --global-success-background: #{$l-global-success-background};
+    --global-success-background-rgb: #{hex-to-rgb($l-global-success-background)};
+    --global-warning-background: #{$l-global-warning-background};
+    --global-warning-background-rgb: #{hex-to-rgb($l-global-warning-background)};
+    --global-danger-background: #{$l-global-danger-background};
+    --global-danger-background-rgb: #{hex-to-rgb($l-global-danger-background)};
+
+    --alert-primary-background: #{lighten(
+            mix(white, $l-global-primary-background, 40%),
+            20%
+        )};
+    --alert-primary-background-rgb: #{hex-to-rgb(
+            lighten(mix(white, $l-global-primary-background, 40%), 20%)
+        )};
+    --alert-success-background: #{lighten(
+            mix(white, $l-global-success-background, 40%),
+            25%
+        )};
+    --alert-success-background-rgb: #{hex-to-rgb(
+            lighten(mix(white, $l-global-success-background, 40%), 25%)
+        )};
+    --alert-warning-background: #{lighten(
+            mix(white, $l-global-warning-background, 45%),
+            15%
+        )};
+    --alert-warning-background-rgb: #{hex-to-rgb(
+            lighten(mix(white, $l-global-warning-background, 45%), 15%)
+        )};
+    --alert-danger-background: #{darken(
+            mix(white, $l-global-danger-background, 40%),
+            20%
+        )};
+    --alert-danger-background-rgb: #{hex-to-rgb(
+            darken(mix(white, $l-global-danger-background, 40%), 20%)
+        )};
+
+    --table-row-active-background: #{$l-table-row-active-background};
+    --table-row-active-background-rgb: #{hex-to-rgb(
+            $l-table-row-active-background
+        )};
+
+    --base-ins-background: #{$l-base-ins-background};
+    --base-ins-background-rgb: #{hex-to-rgb($l-base-ins-background)};
+
+    --modal-close-outside-color: #{lighten($l-global-inverse-color, 20%)};
+    --modal-close-outside-color-rgb: #{hex-to-rgb(
+            lighten($l-global-inverse-color, 20%)
+        )};
+
+    --dotnav-item-hover-background: #{rgba($l-global-color, 0.6)};
+    --dotnav-item-hover-background-rgb: #{hex-to-rgb(rgba($l-global-color, 0.6))};
+    --dotnav-item-onclick-background: #{rgba($l-global-color, 0.2)};
+    --dotnav-item-onclick-background-rgb: #{hex-to-rgb(
+            rgba($l-global-color, 0.2)
+        )};
+    --dotnav-item-active-background: #{rgba($l-global-color, 0.6)};
+    --dotnav-item-active-background-rgb: #{hex-to-rgb(
+            rgba($l-global-color, 0.6)
+        )};
+    --inverse-dotnav-item-hover-background: #{rgba(
+            rgba($l-global-inverse-color, 0.7),
+            0.9
+        )};
+    --inverse-dotnav-item-hover-background-rgb: #{hex-to-rgb(
+            rgba(rgba($l-global-inverse-color, 0.7), 0.9)
+        )};
+    --inverse-dotnav-item-onclick-background: #{rgba(
+            rgba($l-global-inverse-color, 0.7),
+            0.5
+        )};
+    --inverse-dotnav-item-onclick-background-rgb: #{hex-to-rgb(
+            rgba(rgba($l-global-inverse-color, 0.7), 0.5)
+        )};
+    --inverse-dotnav-item-active-background: #{rgba(
+            rgba($l-global-inverse-color, 0.7),
+            0.9
+        )};
+    --inverse-dotnav-item-active-background-rgb: #{hex-to-rgb(
+            rgba(rgba($l-global-inverse-color, 0.7), 0.9)
+        )};
+
+    --inverse-global-muted-background: #{rgba($l-global-inverse-color, 0.1)};
+    --inverse-global-muted-background-rgb: #{hex-to-rgb(
+            rgba($l-global-inverse-color, 0.1)
+        )};
+
+    --overlay-default-background: #{rgba($l-global-inverse-color, 0.8)};
+    --overlay-default-background-rgb: #{hex-to-rgb(
+            rgba($l-global-inverse-color, 0.8)
+        )};
+    --overlay-primary-background: #{rgba($l-global-secondary-background, 0.8)};
+    --overlay-primary-background-rgb: #{hex-to-rgb(
+            rgba($l-global-secondary-background, 0.8)
+        )};
+
+    --thumbnav-item-background: #{rgba($l-global-background, 0.4)};
+    --thumbnav-item-background-rgb: #{hex-to-rgb(
+            rgba($l-global-background, 0.4)
+        )};
+
+    --button-default-hover-background: #{darken($l-global-muted-background, 5%)};
+    --button-default-hover-background-rgb: #{hex-to-rgb(
+            darken($l-global-muted-background, 5%)
+        )};
+    --button-default-active-background: #{darken(
+            $l-global-muted-background,
+            10%
+        )};
+    --button-default-active-background-rgb: #{hex-to-rgb(
+            darken($l-global-muted-background, 10%)
+        )};
+    --button-primary-hover-background: #{darken(
+            $l-global-primary-background,
+            5%
+        )};
+    --button-primary-hover-background-rgb: #{hex-to-rgb(
+            darken($l-global-primary-background, 5%)
+        )};
+    --button-primary-active-background: #{darken(
+            $l-global-primary-background,
+            10%
+        )};
+    --button-primary-active-background-rgb: #{hex-to-rgb(
+            darken($l-global-primary-background, 10%)
+        )};
+    --button-secondary-hover-background: #{darken(
+            $l-global-secondary-background,
+            5%
+        )};
+    --button-secondary-hover-background-rgb: #{hex-to-rgb(
+            darken($l-global-secondary-background, 5%)
+        )};
+    --button-secondary-active-background: #{darken(
+            $l-global-secondary-background,
+            10%
+        )};
+    --button-secondary-active-background-rgb: #{hex-to-rgb(
+            darken($l-global-secondary-background, 10%)
+        )};
+    --button-danger-hover-background: #{darken($l-global-danger-background, 5%)};
+    --button-danger-hover-background-rgb: #{hex-to-rgb(
+            darken($l-global-danger-background, 5%)
+        )};
+    --button-danger-active-background: #{darken(
+            $l-global-danger-background,
+            10%
+        )};
+    --button-danger-active-background-rgb: #{hex-to-rgb(
+            darken($l-global-danger-background, 10%)
+        )};
+
+    --inverse-button-default-hover-background: transparent;
+    --inverse-button-default-hover-background-rgb: transparent;
+    --inverse-button-default-active-background: transparent;
+    --inverse-button-default-active-background-rgb: transparent;
+    --inverse-button-primary-hover-background: #{darken(
+            $l-global-inverse-color,
+            5%
+        )};
+    --inverse-button-primary-hover-background-rgb: #{hex-to-rgb(
+            darken($l-global-inverse-color, 5%)
+        )};
+    --inverse-button-primary-active-background: #{darken(
+            $l-global-inverse-color,
+            10%
+        )};
+    --inverse-button-primary-active-background-rgb: #{hex-to-rgb(
+            darken($l-global-inverse-color, 10%)
+        )};
+    --inverse-button-secondary-hover-background: #{darken(
+            $l-global-inverse-color,
+            5%
+        )};
+    --inverse-button-secondary-hover-background-rgb: #{hex-to-rgb(
+            darken($l-global-inverse-color, 5%)
+        )};
+    --inverse-button-secondary-active-background: #{darken(
+            $l-global-inverse-color,
+            10%
+        )};
+    --inverse-button-secondary-active-background-rgb: #{hex-to-rgb(
+            darken($l-global-inverse-color, 10%)
+        )};
+    --form-range-track-background: #{darken($l-global-muted-background, 5%)};
+    --form-range-track-background-rgb: #{hex-to-rgb(
+            darken($l-global-muted-background, 5%)
+        )};
+    --form-range-track-focus-background: #{darken(
+            $l-global-muted-background,
+            15%
+        )};
+    --form-range-track-focus-background-rgb: #{hex-to-rgb(
+            darken($l-global-muted-background, 15%)
+        )};
+
+    --card-default-hover-background: #{darken($l-global-muted-background, 5%)};
+    --card-default-hover-background-rgb: #{hex-to-rgb(
+            darken($l-global-muted-background, 5%)
+        )};
+    --card-primary-hover-background: #{darken($l-global-primary-background, 5%)};
+    --card-primary-hover-background-rgb: #{hex-to-rgb(
+            darken($l-global-primary-background, 5%)
+        )};
+    --card-secondary-hover-background: #{darken(
+            $l-global-secondary-background,
+            5%
+        )};
+    --card-secondary-hover-background-rgb: #{hex-to-rgb(
+            darken($l-global-secondary-background, 5%)
+        )};
+
+    --form-radio-checked-focus-background: #{darken(
+            $l-global-primary-background,
+            10%
+        )};
+    --form-radio-checked-focus-background-rgb: #{hex-to-rgb(
+            darken($l-global-primary-background, 10%)
+        )};
+    --form-radio-background: #{darken($l-global-muted-background, 5%)};
+    --form-radio-background-rgb: #{hex-to-rgb(
+            darken($l-global-muted-background, 5%)
+        )};
+    --inverse-form-radio-background: #{darken(
+            rgba($l-global-inverse-color, 0.1),
+            5%
+        )};
+    --inverse-form-radio-background-rgb: #{hex-to-rgb(
+            darken(rgba($l-global-inverse-color, 0.1), 5%)
+        )};
+    --inverse-form-radio-checked-focus-background: #{darken(
+            $l-global-inverse-color,
+            10%
+        )};
+    --inverse-form-radio-checked-focus-background-rgb: #{hex-to-rgb(
+            darken($l-global-inverse-color, 10%)
+        )};
+
+    --icon-link-active-color: #{darken($l-global-color, 5%)};
+    --icon-link-active-color-rgb: #{hex-to-rgb(darken($l-global-color, 5%))};
+    --icon-button-background: #{darken($l-global-muted-background, 2%)};
+    --icon-button-hover-background: #{darken($l-global-muted-background, 5%)};
+    --icon-button-hover-background-rgb: #{hex-to-rgb(
+            darken($l-global-muted-background, 5%)
+        )};
+    --icon-button-active-background: #{darken($l-global-muted-background, 10%)};
+    --icon-button-active-background-rgb: #{hex-to-rgb(
+            darken($l-global-muted-background, 10%)
+        )};
+
+    --inverse-icon-button-hover-background: #{darken(
+            rgba($l-global-inverse-color, 0.1),
+            5%
+        )};
+    --inverse-icon-button-hover-background-rgb: #{hex-to-rgb(
+            darken(rgba($l-global-inverse-color, 0.1), 5%)
+        )};
+    --inverse-icon-button-active-background: #{darken(
+            rgba($l-global-inverse-color, 0.1),
+            10%
+        )};
+    --inverse-icon-button-active-background-rgb: #{hex-to-rgb(
+            darken(rgba($l-global-inverse-color, 0.1), 10%)
+        )};
+
+    --button-default-hover-border: #{darken($l-global-border, 20%)};
+    --button-default-hover-border-rgb: #{hex-to-rgb(
+            darken($l-global-border, 20%)
+        )};
+    --button-default-active-border: #{darken($l-global-border, 30%)};
+    --button-default-active-border-rgb: #{hex-to-rgb(
+            darken($l-global-border, 30%)
+        )};
+
+    --form-range-thumb-border: #{darken($l-global-border, 10%)};
+    --form-range-thumb-border-rgb: #{hex-to-rgb(darken($l-global-border, 10%))};
+    --form-radio-border: #{darken($l-global-border, 10%)};
+    --form-radio-border-rgb: #{hex-to-rgb(darken($l-global-border, 10%))};
+
+    --inverse-table-row-active-background: #{fade-out(
+            rgba($l-global-inverse-color, 0.1),
+            0.02
+        )};
+    --inverse-table-row-active-background-rgb: #{hex-to-rgb(
+            fade-out(rgba($l-global-inverse-color, 0.1), 0.02)
+        )};
+
+    //
+    // Borders
+    //
+
+    --global-border: #{$l-global-border};
+    --global-border-rgb: #{hex-to-rgb($l-global-border)};
+    --dotnav-item-border: #{rgba($l-global-color, 0.4)};
+    --dotnav-item-border-rgb: #{hex-to-rgb(rgba($l-global-color, 0.4))};
+
+    //
+    // Box Shadow
+    //
+
+    --global-medium-box-shadow: #{$l-global-medium-box-shadow};
+    --global-large-box-shadow: #{$l-global-large-box-shadow};
+}
