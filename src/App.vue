@@ -16,8 +16,7 @@ import { ipcRenderer } from "electron"
 export default {
     name: "App",
     async mounted() {
-        console.log("mounted")
-        const val = await ipcRenderer.invoke("sayHello")
+        const val = await ipcRenderer.invoke("bar", "Johny")
         console.log({ val })
     },
 }

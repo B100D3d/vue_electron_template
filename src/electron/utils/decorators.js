@@ -1,9 +1,8 @@
 import { ipcMain } from "electron"
 
-export function IpcMainHandle(event: string) {
-    return (target: Object, key: string, descriptor: PropertyDescriptor) => {
+export function IpcMainHandle(event) {
+    return (target, key, descriptor) => {
         ipcMain.handle(event, async (event, ...eventArgs) => {
-            // @ts-ignore
             return descriptor.value.call(this, ...eventArgs)
         })
 
