@@ -7,8 +7,8 @@ export default {
     name: "Login",
 
     setup() {
-        const { isAuthenticated } = useGetters("auth")
-        const { signIn } = useActions("auth")
+        const { isAuthenticated } = useGetters()
+        const { signIn } = useActions()
 
         return { signIn, isAuthenticated }
     },
@@ -27,6 +27,7 @@ export default {
                     await this.signIn({ email, password })
                     if (this.isAuthenticated) {
                         await this.$router.push("/")
+                        window.open("/", "_blank")
                     }
                 } catch (e) {
                     console.error(e)

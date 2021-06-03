@@ -1,5 +1,5 @@
 export default {
-    auth({ commit }) {
+    auth({ commit, state }) {
         commit("SET_TOKEN", null)
     },
     signIn({ commit }, { email, password }) {
