@@ -1,4 +1,9 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router"
+import {
+    createRouter,
+    createWebHashHistory,
+    createWebHistory,
+    RouteRecordRaw,
+} from "vue-router"
 import store from "@/store"
 import { MiddlewareContext, RouterMiddleware } from "@/types/Router"
 import mainRoutes from "./main-routes"
@@ -31,7 +36,7 @@ const routes: Array<RouteRecordRaw> = [
 ]
 
 const router = createRouter({
-    history: createWebHistory(process.env.BASE_URL),
+    history: createWebHashHistory(process.env.BASE_URL),
     routes,
 })
 

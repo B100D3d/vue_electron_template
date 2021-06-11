@@ -1,22 +1,15 @@
 <script>
 import ChatService from "@/services/ChatService"
+import MessageItem from "@/components/MessageItem"
 
-const chat = new ChatService("ws://localhost:3000")
 export default {
     name: "Chat",
+    components: { MessageItem },
     data() {
         return {
-            messages: ["Hello", "Oh, Hello Man"],
+            messages: ["Hello", "Oh, Hello Man", "Third"],
             message: "",
         }
-    },
-    created() {
-        chat.open()
-        chat.subscribeToMessages(this.handleMessage)
-    },
-    beforeUnmount() {
-        chat.unsubscribeFromMessages(this.handleMessage)
-        chat.close()
     },
     methods: {
         handleMessage(message) {
@@ -24,10 +17,12 @@ export default {
         },
         sendMessage() {
             if (this.message) {
-                chat.sendMessage(this.message)
-                this.messages.push(this.message)
+                this.messages.splice(0, 0, this.message)
                 this.message = ""
             }
+        },
+        open() {
+            window.open("/", "_blank")
         },
     },
 }
@@ -40,17 +35,26 @@ export default {
                 uk-container uk-container-small uk-height-1-1 uk-overflow-auto
             "
         >
-            <ul class="uk-list">
-                <template v-for="(message, idx) of messages" :key="idx">
-                    <hr v-if="idx" />
-                    <li class="uk-margin-bottom">
-                        {{ message }}
-                    </li>
-                </template>
-            </ul>
+            <button
+                uk-icon="move"
+                class="
+                    uk-icon-button
+                    uk-position-top-right
+                    uk-margin-top
+                    uk-margin-right
+                "
+                @click="open"
+            />
+            <transition-group tag="ul" name="fade-move" class="uk-list">
+                <message-item
+                    v-for="(message, idx) of messages"
+                    :key="idx"
+                    :message="message"
+                />
+            </transition-group>
             <input
                 type="text"
-                class="uk-input"
+                class="chat-input uk-input"
                 v-model="message"
                 placeholder="Write a message"
                 @keydown.enter="sendMessage"
@@ -61,7 +65,7 @@ export default {
 
 <style lang="scss" scoped>
 .chat {
-    input {
+    .chat-input {
         width: 300px;
         position: absolute;
         bottom: 0;
